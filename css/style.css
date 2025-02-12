@@ -41,23 +41,42 @@
 /* Carousel Section */
 .carousel {
     width: 100%; /* Full width */
-    height: 700px; /* Set a fixed height for the carousel */
+    height: 80vh; /* Set a fixed height for the carousel */
 }
 
 /* Ensure carousel items take the full height and width */
 .carousel-inner {
-    height: 100%; /* Ensure inner carousel items take the full height */
+    height: 80vh; /* Ensure inner carousel items take the full height */
 }
 
 /* Set fixed width and height for images inside carousel */
 .carousel-item img {
     width: 100%; /* Make the image fill the full width of the container */
-    height: 700px; /* Make the image fill the full height of the container */
+    height: 80vh; /* Make the image fill the full height of the container */
     object-fit: cover; /* Ensures the image covers the space without distortion */
 }
 
 .carousel img {
     border-radius: 10px;
+}
+
+/* Adjust height for smaller screens */
+@media (max-width: 992px) { /* Tablets */
+    .carousel, .carousel-inner, .carousel-item, .carousel-item img {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 768px) { /* Large phones */
+    .carousel, .carousel-inner, .carousel-item, .carousel-item img {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 576px) { /* Small phones */
+    .carousel, .carousel-inner, .carousel-item, .carousel-item img {
+        height: 30vh;
+    }
 }
 
 /* Slider for Upcoming Events */
