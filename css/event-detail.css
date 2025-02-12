@@ -1,0 +1,256 @@
+/* Events Section */
+.events {
+    text-align: center;
+}
+
+.event-detail {
+    text-align: justify;
+    padding: 35px;
+    /* background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white; */
+}
+
+.event-image {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+ul li {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #ff7e5f;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Inquiry Form Styling */
+.inquiry-section {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient Background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inquiry-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.inquiry-section h2 {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Form Inputs */
+.inquiry-form .form-group {
+    margin-bottom: 20px;
+}
+
+.inquiry-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.inquiry-form input:focus,
+.inquiry-form textarea:focus {
+    background: rgba(255, 255, 255, 0.4);
+    outline: none;
+    border-color: #fff;
+}
+
+/* Button Styling */
+.inquiry-form .btn-submit {
+    background: white;
+    color: #ff7e5f;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.inquiry-form .btn-submit:hover {
+    background: #fff3e0;
+    color: #d65a31;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .inquiry-section {
+        padding: 20px;
+    }
+
+    .inquiry-form input,
+    .inquiry-form textarea {
+        font-size: 14px;
+    }
+}
+
+
+.popup {
+    width:400px;
+    background-color: #e8bcf0;
+    border-radius: 3mm;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    position: fixed;
+    /* padding: 30px; */
+    visibility: hidden;
+  }
+  
+  .popup img {
+    padding-top: 20px;
+  }
+  
+  .popup button {
+    background-color: #fff;
+    border: 1px solid #7600bc;
+    color: #7600bc;
+    display: block;
+    border-radius: 6px;
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+    width: 2in;
+    font-size: 20px;
+    margin-left: 25%;
+  }
+  
+  .popup button:hover {
+    background-color: #fff;
+    border: 2px solid #7600bc;
+    color: #7600bc;
+    display: block;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 25%;
+  }
+  
+  /* Recommendation Form */ 
+  fieldset {
+    display: flexbox;
+    align-content: center;
+    justify-content: center;  
+    padding: 25px; 
+    margin-left: 50px; 
+    margin-right: 50px;   
+    border: thin solid white;
+    width: 50%;
+  }
+
+  /* Event Detail Container */
+.event-detail-container {
+    padding: 40px 15px ; 
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+
+/* Event Image */
+.event-detail-container img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Event Title */
+.event-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Event Description */
+.event-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Services Title */
+.services-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #222;
+}
+
+/* Services List */
+.event-services {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.event-services li {
+    font-size: 16px;
+    padding: 5px 0;
+    color: #444;
+    position: relative;
+}
+
+/* Add bullet icon */
+.event-services li::before {
+    content: "✔";
+    color: #28a745;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 768px) {
+    .event-detail-container .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .event-services {
+        text-align: left;
+        display: inline-block;
+    }
+    
+    .event-detail-container img {
+        height: auto;
+    }
+}

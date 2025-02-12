@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Infinity Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/navbar-footer.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="50" class="rounded-pill">
+                <span>Infinity Events</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">We’d love to hear from you! Contact us for inquiries, collaborations, or event bookings.</p>
+            
+            <div class="row">
+                <!-- Left: Contact Details -->
+                <div class="col-md-6">
+                    <div class="contact-container">
+                        <!-- Address Box -->
+                        <div class="contact-box">
+                            <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                            <h4>Address</h4>
+                            <p>123 Event Street, Mumbai, India</p>
+                        </div>
+    
+                        <!-- Email Box -->
+                        <div class="contact-box">
+                            <div class="icon"><i class="bi bi-envelope"></i></div>
+                            <h4>Email</h4>
+                            <p>info@infinityevents.com</p>
+                        </div>
+    
+                        <!-- Contact Box -->
+                        <div class="contact-box">
+                            <div class="icon"><i class="bi bi-telephone"></i></div>
+                            <h4>Contact</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Right: Contact Form -->
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <h3>Send us a message</h3>
+                        <form id="contactForm">
+                            <input type="text" id="name" placeholder="Full Name" required>
+                            <input type="email" id="email" placeholder="Email Address" required>
+                            <input type="text" id="phone" placeholder="Contact Number" required>
+                            <textarea id="message" placeholder="Describe your event or inquiry..." rows="4" required></textarea>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent page reload
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            let namePattern = /^[A-Za-z\s]+$/;
+            let phonePattern = /^[0-9]{10}$/;
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!namePattern.test(name)) {
+                alert("Please enter a valid name (only alphabets).");
+                return;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid 10-digit contact number.");
+                return;
+            }
+            if (message.length < 10) {
+                alert("Please enter a detailed message (at least 10 characters).");
+                return;
+            }
+
+            alert("Thank you! Your inquiry has been submitted.");
+            document.getElementById("contactForm").reset();
+        });
+
+    </script>
+
+
+    <div class="contact-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9462937404264!2d72.48632747476924!3d22.98900231758123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b001c7f2381%3A0xfc3ec2f1bebf8ff4!2sLJ%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1737545028418!5m2!1sen!2sin"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Infinity Events. All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

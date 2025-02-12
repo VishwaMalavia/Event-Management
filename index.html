@@ -1,0 +1,586 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/navbar-footer.css"> 
+    
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="home1"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="50" class="rounded-pill"> <span>Infinity Evnets</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section with Video Background -->
+    <section class="hero mt-5 mb-5">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="images/videoplayback (online-video-cutter.com).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-text">
+            <h1>Welcome to Infinity Events</h1>
+            <p>Your One-Stop Solution for Perfect Events</p>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="container">
+        <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/event1.jpg" class="d-block w-100" alt="Event 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/event2.jpg" class="d-block w-100" alt="Event 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/event3.jpg" class="d-block w-100" alt="Event 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <div class="container slider-container p-4">
+        <h2>Upcoming Events</h2>
+        <button class="scroll-left">←</button>
+        <div class="row">
+            <div class="event-container">
+                <div class="col-md-3 col-sm col">
+                    <div class="card event-card">
+                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Meetup</h5>
+                            <p class="card-text">Join us for a professional networking event.</p>
+                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm col">
+                    <div class="card event-card">
+                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Music Concert</h5>
+                            <p class="card-text">Join us for a professional networking event.</p>
+                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm col">
+                    <div class="card event-card">
+                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Meetup</h5>
+                            <p class="card-text">Join us for a professional networking event.</p>
+                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm col">
+                    <div class="card event-card">
+                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Meetup</h5>
+                            <p class="card-text">Join us for a professional networking event.</p>
+                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm col">
+                    <div class="card event-card">
+                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Corporate Meetup</h5>
+                            <p class="card-text">Join us for a professional networking event.</p>
+                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-right">→</button>
+    </div>
+
+
+    <script>
+        document.querySelector('.scroll-left').addEventListener('click', function () {
+            document.querySelector('.event-container').scrollBy({
+                top: 0,
+                left: -200, // Adjust based on card width
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelector('.scroll-right').addEventListener('click', function () {
+            document.querySelector('.event-container').scrollBy({
+                top: 0,
+                left: 200, // Adjust based on card width
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+
+
+    <!-- Two Sections with Text & Image -->
+    <div class="container p-5 text-white"
+        style="background: linear-gradient(135deg, #ff7e5f, #feb47b); border-radius: 10px;">
+        <!-- Heading -->
+        <h2 class="mb-4 text-white text-center">Why Choose Infinity Events?</h2>
+
+        <!-- First Row: Text on Left, Image on Right -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <p class="font-size">
+                    At Infinity Events, we believe that every celebration should be a reflection of your dreams, vision,
+                    and personality. With a team of dedicated professionals, we meticulously plan and execute events
+                    that leave lasting impressions. Whether it's a grand wedding, a corporate gathering, or a private
+                    celebration, our expertise ensures a seamless experience from start to finish. We specialize in
+                    curating unique themes, breathtaking décor, and flawless logistics to make your special moments
+                    truly extraordinary. Our commitment to excellence, attention to detail, and passion for creativity
+                    set us apart, making us the perfect choice for your next big event.
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/about1.jpg" alt="Infinity Events Planning" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
+        <!-- Second Row: Image on Left, Text on Right -->
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="images/about2.jpg" alt="Event Decoration" class="img-fluid rounded shadow-lg">
+            </div>
+            <div class="col-md-6">
+                <p class="font-size">
+                    What makes Infinity Events stand out is our ability to transform ideas into unforgettable
+                    experiences. We go beyond just planning; we craft personalized experiences that cater to your
+                    preferences and exceed your expectations. Our strong vendor partnerships, cutting-edge technology,
+                    and innovative approach allow us to bring fresh concepts to life while maintaining high standards of
+                    quality and professionalism. From conceptualization to execution, we ensure that your event is not
+                    just an occasion but a cherished memory that lasts a lifetime. When you choose Infinity Events,
+                    you're not just hiring an event planner; you're choosing a partner who genuinely cares about making
+                    your moments magical.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Gallery Accordion Section -->
+    <div class="container py-5" id="gallery">
+        <h2>Gallery</h2>
+        <div class="accordion" id="galleryAccordion">
+            <!-- Event 1 Gallery -->
+            <div class="accordion-item" data-aos="fade-down">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">
+                        Corporate Event
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event1.jpg" class="gallery-img " alt="Event 2" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event8.jpg" class="gallery-img " alt="Event 3" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event12.jpg" class="gallery-img " alt="Event 3" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event15.jpg" class="gallery-img " alt="Event 3" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event.jpg" class="gallery-img " alt="Event 1" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2 Gallery -->
+            <div class="accordion-item" data-aos="fade-down">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree">
+                        wedding bells
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event2.jpg" class="gallery-img " alt="Event 4" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event13.jpg" class="gallery-img " alt="Event 6" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event16.jpg" class="gallery-img " alt="Event 6" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event18.jpg" class="gallery-img " alt="Event 5" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-down">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsefour">
+                        Parties
+                    </button>
+                </h2>
+                <div id="collapsefour" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event3.jpg" class=" gallery-img" alt="Event 4" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event11.jpg" class="gallery-img " alt="Event 5" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event14.jpg" class="gallery-img " alt="Event 6" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event21.jpg" class="gallery-img " alt="Event 6" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-down">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsefive">
+                        Promotion Event
+                    </button>
+                </h2>
+                <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event4.jpg" class="gallery-img " alt="Event 4" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event5.jpg" class="gallery-img " alt="Event 5" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event22.jpg" class="gallery-img " alt="Event 6" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-down">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven">
+                        Fashion Event
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event7.jpg" class=" gallery-img" alt="Event 4" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event19.jpg" class="gallery-img " alt="Event 5" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event20.jpg" class="gallery-img " alt="Event 6" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-down">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseEight">
+                        Entertainment Event
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event6.jpg" class=" gallery-img" alt="Event 4" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event9.jpg" class=" gallery-img" alt="Event 5" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event.jpg" class=" gallery-img" alt="Event 6" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" data-aos="fade-down">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseNine">
+                        Festivals
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event10.jpg" class=" gallery-img" alt="Event 4" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event17.jpg" class="gallery-img " alt="Event 5" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                            <div class="col-sm-6 col-md-4 mb-4">
+                                <img src="images/event23.jpg" class=" gallery-img" alt="Event 6" data-bs-toggle="modal"
+                                    data-bs-target="#galleryModal" onclick="openGalleryModal(this)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Gallery -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Gallery Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid" alt="Gallery Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Client Reviews Section -->
+
+    <div id="review"></div>
+    <div class="container py-5" id="review">
+        <h2>Client Reviews</h2>
+        <div id="reviewsContainer">
+            <!-- Existing reviews -->
+            <div class="row">
+                <div class="col-md-4 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">John Doe</h5>
+                            <p class="card-text">"Amazing event management services. Highly recommended!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Jane Doe</h5>
+                            <p class="card-text">"Excellent service and attention to detail. Will definitely use again!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bob Smith</h5>
+                            <p class="card-text">"Very professional and courteous staff. Highly recommend!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Review Form -->
+        <!-- Add Your Review Section -->
+        <div class="review-section mt-4">
+            <h2 class="review-heading">Add Your Review</h2>
+            <form id="reviewForm" onsubmit="form()">
+                <div class="form-group">
+                    <label for="reviewerName">Name</label>
+                    <input type="text" id="reviewerName" class="form-control" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reviewText">Review</label>
+                    <textarea id="reviewText" class="form-control" rows="3" placeholder="Write your review here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- create home button which will redirect top of page: this is aplicablt for all pages-->
+    <div>
+        <a href="#home1" id="back-to-top">
+            <i class="bi bi-arrow-up-short text-white"></i>
+        </a>
+    </div>
+    <script>
+        // Get the back-to-top button by class name (returns a collection, so we access the first element)
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // Directly use the onscroll event handler
+        window.onscroll = function () {
+            if (window.scrollY > 100) { // Show the button after scrolling down 100px
+                backToTopButton.style.display = 'flex';
+                backToTopButton.style.backgroundColor = "#333";
+            } else { // Hide the button if at the top of the page
+                backToTopButton.style.display = 'none';
+                backToTopButton.style.backgroundColor = "white";
+            }
+        };
+    </script>
+
+    <footer class="bg-dark text-white pb-0">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-3">
+                    <h3>Infinity Event</h3>
+                    <img src="images/logo.png" alt="not found" class="logo">
+                    <p>Crafting unforgettable experiences with seamless planning and flawless execution.</p>
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="https://x.com/" class="text-white me-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://in.linkedin.com/" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-3 text-left">
+                    <h4>Pages</h4>
+                    <ul class="list-unstyled ">
+                        <li>> <a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li>> <a href="events.html" class="text-white text-decoration-none">Events</a></li>
+                        <li>> <a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li>> <a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-3 text-left">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled ">
+                        <li>> <a href="index.html?#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                        <li>> <a href="index.html?#review" class="text-white text-decoration-none">Review</a></li>
+                        <li>> <a href="index.html" class="text-white text-decoration-none">Terms & Condition</a></li>
+                        <li>> <a href="index.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Links -->
+                <div class="col-md-3">
+                    <div class=" text-left">
+                        <ul class="list-unstyled">
+                            <h4 class="text-color">Contact</h4>
+                            <li class=" text-color">
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-md-1">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div class="col-md">
+                                        607, Abhijyot Square, B/h. SG Highway, Divya Bhaskar Press, Makarba, Ahmedabad,
+                                        Gujarat, 380051.
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-md-1">
+                                        <i class="bi bi-envelope-fill "></i>
+                                    </div>
+                                    <div class="col-md">
+                                        <a href="mailto:vishwama121@gmail.com" class="text-decoration-none text-white">
+                                            <span>vishwama121@gmail.com</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class=" text-color">
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-md-1">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <div class="col-md">
+                                        <a href="tel:+918849981524"
+                                            class="text-decoration-none text-white">+918849981524</a> , 
+                                        <a href="tel:+919998887776"
+                                            class="text-decoration-none text-white">+919998887776</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" text-center copy-right">
+            <p class="mb-0">&copy; 2025 Event Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

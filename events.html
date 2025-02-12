@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | Infinity Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/navbar-footer.css"> 
+</head>
+<body>
+    <div id="home1"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Logo" width="50" class="rounded-pill"> <span>Infinity Evnets</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Events Section -->
+    <section class="events container py-5">
+        <h2 class="text-center pt-5">Our Events</h2>
+
+        <!-- Filter Buttons -->
+        <div class="text-center mb-4">
+            <button class="btn btn-filter active" onclick="filterEvents('all')">All</button>
+            <button class="btn btn-filter" onclick="filterEvents('Business')">Business</button>
+            <button class="btn btn-filter" onclick="filterEvents('wedding')">Wedding</button>
+            <button class="btn btn-filter" onclick="filterEvents('party')">Party</button>
+            <button class="btn btn-filter" onclick="filterEvents('promotion')">Promotion</button>
+            <button class="btn btn-filter" onclick="filterEvents('Entertainment')">Entertainment</button>
+            <button class="btn btn-filter" onclick="filterEvents('fashion')">Fashion</button>
+            <button class="btn btn-filter" onclick="filterEvents('Festivals')">Festivals</button>
+        </div> 
+        
+
+        <!-- Events Grid -->
+        <div class="row" id="events-list">
+            <!-- Sample Event Card -->
+        </div>
+    
+            
+        <script>
+            const events = [
+            { id: 1, type: 'Business', title: 'Corporate Meetup', description: 'Professional networking event.' },
+            { id: 2, type: 'wedding', title: 'Wedding Fair', description: 'Wedding planning showcase.' },
+            { id: 3, type: 'party', title: 'Birthday Bash', description: 'Celebrate your special day.' },
+            { id: 4, type: 'promotion', title: 'Movie Promotion', description: 'Celebrate music night.' },
+            { id: 5, type: 'promotion', title: 'Product Launch', description: 'Celebrate music night.' },
+            { id: 6, type: 'Entertainment', title: 'Food Festival', description: 'Celebrate music night.' },
+            { id: 7, type: 'fashion', title: 'Fashion Show', description: 'Celebrate music night.' },
+            { id: 8, type: 'Business', title: 'Awards Ceremonies', description: 'Celebrate music night.' },
+            { id: 9, type: 'Entertainment', title: 'Music Concerts', description: 'Celebrate music night.' },
+            { id: 10, type: 'Festivals', title: 'Garba Nights', description: 'Celebrate music night.' },
+            { id: 11, type: 'party', title: 'Farewell Parties', description: 'Celebrate music night.' },
+            { id: 12, type: 'Business', title: 'Annual General Meeting', description: 'Celebrate music night.' },
+            { id: 13, type: 'wedding', title: 'Engagement Ceremony', description: 'Celebrate music night.' },
+            { id: 14, type: 'party', title: 'Anniversary Parties', description: 'Celebrate music night.' },
+            { id: 15, type: 'Business', title: 'Exhibitions', description: 'Celebrate music night.' },
+            { id: 16, type: 'wedding', title: 'Pre-Wedding', description: 'Celebrate music night.' },
+            { id: 17, type: 'Festivals', title: 'Festival of Colors', description: 'Celebrate music night.' },
+        ];
+        
+        // Function to load events dynamically
+        function loadEvents() {
+            let eventContainer = document.getElementById("events-list");
+            eventContainer.innerHTML = ""; // Clear previous content
+        
+            events.forEach(event => {
+                let eventCard = `
+                    <div class="col-md-4 mb-4 ${event.type}">
+                        <div class="card ">
+                            <img src="images/event${event.id}.jpg" class="card-img-top" alt="${event.title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${event.title}</h5>
+                                <p class="card-text">${event.description}</p>
+                                <a href="event-detail.html?id=${event.id}" class="btn btn-primary">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                eventContainer.innerHTML += eventCard;
+            });
+        }
+        
+        // Function to filter events
+        function filterEvents(category) {
+            let events = document.querySelectorAll('.event-item');
+            events.forEach(event => {
+                if (category === 'all' || event.classList.contains(category)) {
+                    event.style.display = "block";
+                } else {
+                    event.style.display = "none";
+                }
+            });
+        
+            // Update active button style
+            document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[onclick="filterEvents('${category}')"]`).classList.add('active');
+        }
+        
+        // Load events when the page loads
+        document.addEventListener("DOMContentLoaded", loadEvents);
+        
+
+        
+        </script>
+            
+            <!-- More Events Can Be Added Here -->
+    </section>
+
+    <!-- create home button which will redirect top of page: this is aplicablt for all pages-->
+    <div>
+        <a href="#home1" id="back-to-top">
+            <i class="bi bi-arrow-up-short text-white"></i>
+        </a>
+
+    </div>
+    <script>
+        // Get the back-to-top button by class name (returns a collection, so we access the first element)
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // Directly use the onscroll event handler
+        window.onscroll = function () {
+            if (window.scrollY > 100) { // Show the button after scrolling down 100px
+                backToTopButton.style.display = 'flex';
+                backToTopButton.style.backgroundColor = "#333";
+            } else { // Hide the button if at the top of the page
+                backToTopButton.style.display = 'none';
+                backToTopButton.style.backgroundColor = "white";
+
+            }
+        };
+    </script>
+
+    <footer class="bg-dark text-white pb-0">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-3">
+                    <h3>Infinity Event</h3>
+                    <img src="images/logo.png" alt="not found" class="logo">
+                    <p>Crafting unforgettable experiences with seamless planning and flawless execution.</p>
+                    <h4>Follow Us</h4>
+                    <a href="https://www.facebook.com/" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="https://x.com/" class="text-white me-2"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://in.linkedin.com/" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 text-left">
+                    <h4>Pages</h4>
+                    <ul class="list-unstyled ">
+                        <li>> <a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li>> <a href="events.html" class="text-white text-decoration-none">Events</a></li>
+                        <li>> <a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                        <li>> <a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3 text-left">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled ">
+                        <li>> <a href="index.html?#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                        <li>> <a href="index.html?#review" class="text-white text-decoration-none">Review</a></li>
+                        <li>> <a href="index.html" class="text-white text-decoration-none">Terms & Condition</a></li>
+                        <li>> <a href="index.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="col-md-3">
+                    <div class=" text-left">
+                        <ul class="list-unstyled">
+                            <h4 class="text-color">Contact</h4>
+                            <li class=" text-color">
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-md-1">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <div class="col-md">
+                                        607, Abhijyot Square, B/h. SG Highway, Divya Bhaskar Press, Makarba, Ahmedabad,
+                                        Gujarat, 380051.
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-md-1">
+                                        <i class="bi bi-envelope-fill "></i>
+                                    </div>
+                                    <div class="col-md">
+                                        <a href="mailto:vishwama121@gmail.com" class="text-decoration-none text-white">
+                                            <span>vishwama121@gmail.com</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class=" text-color">
+                                <div class="row d-flex align-items-center">
+                                    <div class="col-md-1">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <div class="col-md">
+                                        <a href="tel:+918849981524"
+                                            class="text-decoration-none text-white">+918849981524</a> , 
+                                        <a href="tel:+919998887776"
+                                            class="text-decoration-none text-white">+919998887776</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class=" text-center copy-right">
+            <p class="mb-0">&copy; 2025 Event Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

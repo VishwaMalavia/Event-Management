@@ -1,0 +1,382 @@
+/* Hero section styling */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Set the height to half the viewport */
+}
+
+/* Video styling - Take half the screen */
+.hero video.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Keeps the video behind the text */
+}
+
+/* Hero text styling */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensures text stays above the video */
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+
+/* Carousel Section */
+.carousel {
+    width: 100%; /* Full width */
+    height: 700px; /* Set a fixed height for the carousel */
+}
+
+/* Ensure carousel items take the full height and width */
+.carousel-inner {
+    height: 100%; /* Ensure inner carousel items take the full height */
+}
+
+/* Set fixed width and height for images inside carousel */
+.carousel-item img {
+    width: 100%; /* Make the image fill the full width of the container */
+    height: 700px; /* Make the image fill the full height of the container */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+.carousel img {
+    border-radius: 10px;
+}
+
+/* Slider for Upcoming Events */
+.card {
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures cards have uniform height */
+    display: flex;
+    flex-direction: column;
+    height: 100px; /* Ensures cards have uniform height */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden; /* Hide overflow */
+}
+
+.event-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Optional: for smooth scrolling */
+}
+
+.event-card {
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+    margin-right: 15px; /* Space between cards */
+    background-color: #fff; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0.1, 0.6); /* Shadow effect */
+    scroll-snap-align: start; /* Optional: for smooth scrolling */
+    height: 100px; /* Ensures all cards have the same height */
+}
+
+.event-card img {
+    width: 100%; /* Make image responsive */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Crop and scale images to cover the area */
+    border-radius: 8px 8px 0 0; /* Rounded corners for the top */
+}
+
+.event-card h3 {
+    margin: 10px 0; /* Space above and below the title */
+    
+}
+
+.event-card p {
+    color: #666; /* Text color */
+    font-size: 0.9em;
+}
+
+/* Navigation Arrows */
+.scroll-left, .scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.scroll-left {
+    left: 20px;
+}
+
+.scroll-right {
+    right: 20px;
+}
+.event-container {
+    overflow-x: scroll;           /* Enable horizontal scrolling */
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* Internet Explorer 10+ */ 
+}
+  
+.event-container::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Opera */
+}
+
+
+/* About Section */
+.font-size{
+    font-size:20px;
+}
+/* Small screens (phones) */
+@media (max-width: 576px) {
+    .font-size {
+        font-size: 15px; /* Adjust font size */
+    }
+    img {
+        max-width: 100%; /* Ensure images take full width on small devices */
+    }
+}
+
+/* Gallery */
+/* General Accordion Styles */
+.accordion {
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease;
+}
+
+/* Accordion Header Styles */
+.accordion-header {
+    background-color: #FF7043; /* Lighter orange background */
+    border-radius: 10px;
+}
+
+.accordion-button {
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background-color: #FF7043; /* Default lighter orange */
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background: linear-gradient(135deg, #FF7043, #FFEB3B); /* Blend between orange and yellow on hover */
+    color: #000; /* Change text color to black for better contrast */
+}
+
+.accordion-button:focus {
+    box-shadow: none; /* Remove the focus ring */
+}
+
+/* Change to yellow when accordion item is active */
+.accordion-button:not(.collapsed) {
+    background-color: #FFEB3B; /* Yellow when active */
+    color: #000; /* Change text color to black for better contrast */
+}
+
+/* Accordion Body Styles */
+.accordion-collapse {
+    transition: all 0.4s ease;
+}
+
+.accordion-body {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Image Styles */
+.gallery-img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 16px; /* Smaller text on smaller screens */
+        padding: 12px 15px;
+    }
+
+    .gallery-img {
+        height: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .accordion-button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .gallery-img {
+        margin-bottom: 10px;
+    }
+}
+
+.model:hover{
+    cursor: pointer;
+}
+#modalImage {
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+/* Client Reviews */
+#reviewsContainer {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Eye-catching gradient */
+    padding: 50px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+/* Review Section Styling */
+.review-section {
+    background: linear-gradient(135deg, black  , darkgrey); /* Coral to Soft Pink Gradient */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(255, 105, 61, 0.2);
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+    color: #fff;
+}
+
+/* Heading Styling */
+/* Review Section */
+.review-section {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.review-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+.review-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Styling */
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+label {
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Input & Textarea */
+.form-control {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    transform: scale(1.02);
+}
+
+/* Submit Button */
+.btn-primary {
+    background: #4CAF50;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effect */
+.btn-primary:hover {
+    background: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
