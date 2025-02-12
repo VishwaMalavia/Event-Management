@@ -70,7 +70,6 @@
     height: 100%; /* Ensures cards have uniform height */
     display: flex;
     flex-direction: column;
-    height: 100px; /* Ensures cards have uniform height */
 }
 
 .card:hover {
@@ -86,6 +85,7 @@
 .event-container {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px;
     scroll-snap-type: x mandatory; /* Optional: for smooth scrolling */
 }
 
@@ -96,7 +96,7 @@
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 5px rgba(0, 0, 0.1, 0.6); /* Shadow effect */
     scroll-snap-align: start; /* Optional: for smooth scrolling */
-    height: 100px; /* Ensures all cards have the same height */
+    height: 100% /* Ensures all cards have the same height */
 }
 
 .event-card img {

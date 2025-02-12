@@ -1,4 +1,5 @@
-inquiry = () => {
+inquiry = (event) => {
+    event.preventDefault(); // Prevent page reload
     // Get input values
     // Get input values
     let name = document.getElementById("name").value.trim();

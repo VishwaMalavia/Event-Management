@@ -16,7 +16,9 @@ function openGalleryModal(image) {
 //     }
 // });
 
-form = () => {
+form = (event) => {
+    event.preventDefault(); // Prevent page reload
+
     // Get input values
     const name = document.getElementById('reviewerName').value;
     const review = document.getElementById('reviewText').value;
