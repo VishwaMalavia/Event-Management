@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar-footer.css">
 
-    <link rel="stylesheet" href="css/navbar-footer.css"> 
-    
     <script defer src="js/script.js"></script>
 </head>
 
 <body>
     <div id="home1"></div>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/logo.png" alt="Logo" width="50" class="rounded-pill"> <span>Infinity Evnets</span>
@@ -28,6 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link " href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -35,7 +35,7 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- Hero Section with Video Background -->
     <section class="hero mt-5 mb-5">
         <video autoplay loop muted playsinline class="background-video">
@@ -72,65 +72,61 @@
     </section>
 
     <!-- Upcoming Events -->
+    <!-- Upcoming Events -->
     <div class="container slider-container p-4">
         <h2>Upcoming Events</h2>
         <button class="scroll-left">←</button>
-        <div class="row">
+
+        <div class="event-wrapper">
             <div class="event-container">
-                <div class="col-md-3">
-                    <div class="card event-card">
-                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Corporate Meetup</h5>
-                            <p class="card-text">Join us for a professional networking event.</p>
-                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
-                        </div>
+                <!-- Event Cards -->
+                <div class="card event-card">
+                    <img src="images/event1.jpg" alt="Corporate Meetup">
+                    <div class="card-body">
+                        <h3>Corporate Meetup</h3>
+                        <p>Join us for a professional networking event.</p>
+                        <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card event-card">
-                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Music Concert</h5>
-                            <p class="card-text">Join us for a professional networking event.</p>
-                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
-                        </div>
+                <div class="card event-card">
+                    <img src="images/event2.jpg" alt="Music Concert">
+                    <div class="card-body">
+                        <h3>Music Concert</h3>
+                        <p>Experience an amazing night of music and fun.</p>
+                        <a href="event-detail.html?id=2" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card event-card">
-                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Corporate Meetup</h5>
-                            <p class="card-text">Join us for a professional networking event.</p>
-                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
-                        </div>
+                <div class="card event-card">
+                    <img src="images/event3.jpg" alt="Food Festival">
+                    <div class="card-body">
+                        <h3>Food Festival</h3>
+                        <p>Enjoy delicious cuisines from around the world.</p>
+                        <a href="event-detail.html?id=3" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card event-card">
-                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Corporate Meetup</h5>
-                            <p class="card-text">Join us for a professional networking event.</p>
-                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
-                        </div>
+                <div class="card event-card">
+                    <img src="images/event4.jpg" alt="Startup Pitch">
+                    <div class="card-body">
+                        <h3>Startup Pitch</h3>
+                        <p>Showcase your startup idea to investors.</p>
+                        <a href="event-detail.html?id=4" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="card event-card">
-                        <img src="images/event1.jpg" class="card-img-top" alt="Event 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Corporate Meetup</h5>
-                            <p class="card-text">Join us for a professional networking event.</p>
-                            <a href="event-detail.html?id=1" class="btn btn-primary">Learn More</a>
-                        </div>
+                <div class="card event-card">
+                    <img src="images/event5.jpg" alt="Art Exhibition">
+                    <div class="card-body">
+                        <h3>Art Exhibition</h3>
+                        <p>Explore creative artwork from talented artists.</p>
+                        <a href="event-detail.html?id=5" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
+
         <button class="scroll-right">→</button>
     </div>
+
+
 
     <script>
         document.querySelector('.scroll-left').addEventListener('click', function () {
@@ -149,52 +145,6 @@
             });
         });
     </script>
-
-
-
-    <!-- Two Sections with Text & Image -->
-    <div class="container p-5 text-white"
-        style="background: linear-gradient(135deg, #ff7e5f, #feb47b); border-radius: 10px;">
-        <!-- Heading -->
-        <h2 class="mb-4 text-white text-center">Why Choose Infinity Events?</h2>
-
-        <!-- First Row: Text on Left, Image on Right -->
-        <div class="row align-items-center mb-4">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <p class="font-size">
-                    At Infinity Events, we believe that every celebration should be a reflection of your dreams, vision,
-                    and personality. With a team of dedicated professionals, we meticulously plan and execute events
-                    that leave lasting impressions. Whether it's a grand wedding, a corporate gathering, or a private
-                    celebration, our expertise ensures a seamless experience from start to finish. We specialize in
-                    curating unique themes, breathtaking décor, and flawless logistics to make your special moments
-                    truly extraordinary. Our commitment to excellence, attention to detail, and passion for creativity
-                    set us apart, making us the perfect choice for your next big event.
-                </p>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="images/about1.jpg" alt="Infinity Events Planning" class="img-fluid rounded shadow-lg">
-            </div>
-        </div>
-
-        <!-- Second Row: Image on Left, Text on Right -->
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center">
-                <img src="images/about2.jpg" alt="Event Decoration" class="img-fluid rounded shadow-lg">
-            </div>
-            <div class="col-md-6">
-                <p class="font-size">
-                    What makes Infinity Events stand out is our ability to transform ideas into unforgettable
-                    experiences. We go beyond just planning; we craft personalized experiences that cater to your
-                    preferences and exceed your expectations. Our strong vendor partnerships, cutting-edge technology,
-                    and innovative approach allow us to bring fresh concepts to life while maintaining high standards of
-                    quality and professionalism. From conceptualization to execution, we ensure that your event is not
-                    just an occasion but a cherished memory that lasts a lifetime. When you choose Infinity Events,
-                    you're not just hiring an event planner; you're choosing a partner who genuinely cares about making
-                    your moments magical.
-                </p>
-            </div>
-        </div>
-    </div>
 
 
     <!-- Gallery Accordion Section -->
@@ -465,12 +415,14 @@
                 </div>
                 <div class="form-group">
                     <label for="reviewText">Review</label>
-                    <textarea id="reviewText" class="form-control" rows="3" placeholder="Write your review here..." required></textarea>
+                    <textarea id="reviewText" class="form-control" rows="3" placeholder="Write your review here..."
+                        required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>
         </div>
     </div>
+
 
     <!-- create home button which will redirect top of page: this is aplicablt for all pages-->
     <div>
@@ -563,7 +515,7 @@
                                     </div>
                                     <div class="col-md">
                                         <a href="tel:+918849981524"
-                                            class="text-decoration-none text-white">+918849981524</a> , 
+                                            class="text-decoration-none text-white">+918849981524</a> ,
                                         <a href="tel:+919998887776"
                                             class="text-decoration-none text-white">+919998887776</a>
                                     </div>

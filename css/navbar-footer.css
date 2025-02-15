@@ -1,14 +1,14 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
 }
 
 /* Navbar Styling */
 .navbar {
-    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blue gradient */
+    background: linear-gradient(145deg ,#181818,#474747bb );
+    /* background: linear-gradient(80deg ,#0d002d,#282828e7 ); */
     padding: 15px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -21,13 +21,23 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: white !important;
     font-size: 18px;
 }
 
+/* Hover Effect for Links */
 .navbar-nav .nav-link:hover {
-    color: #FFD700 !important;
+    color: #FFD700; /* Orange color when hovering */
+    background-color: #333; /* Dark background on hover */
+    border-radius: 5px; /* Rounded corners */
 }
+
+/* Active Link Style */
+.nav-link.active {
+    color: #FFD700 !important; /* Active link color */
+    font-weight: bold;
+    border-bottom: 3px solid #FF7043; /* Underline effect for active link */
+}
+
 
 /* Navbar Shrinks on Scroll */
 .navbar.scrolled {

@@ -4,9 +4,9 @@
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
     border-radius: 10px;
-    margin: 40px !important;
+    margin: 20px !important;
     text-align: center;
-    margin-top: 110px !important;
+    margin-top: 110px !important;   
 }
 
 .section-title {
@@ -33,7 +33,8 @@
 
 /* Service Cards */
 .service-card {
-    width: 32%;
+    min-width: 32%;
+    max-width: 32%;
     background: white;
     padding: 20px;
     border-radius: 12px;
@@ -95,17 +96,23 @@
     }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
+/* Responsive Layout */
+/* For medium screens: 2 cards per row */
+@media (max-width: 992px) {
     .service-card {
-        width: 90%;
+        min-width: 48%;
+        max-width: 48%;
     }
 }
+
+/* For small screens: 1 card per row */
+@media (max-width: 768px) {
+    .service-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
 
 /* Form Styling */
 .pricing-form {

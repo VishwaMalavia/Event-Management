@@ -1,0 +1,93 @@
+/* About Section */
+.font-size{
+    font-size:20px;
+}
+/* Small screens (phones) */
+@media (max-width: 576px) {
+    .font-size {
+        font-size: 15px; /* Adjust font size */
+    }
+    img {
+        max-width: 100%; /* Ensure images take full width on small devices */
+    }
+}
+.choose-section {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    margin-top: 50px !important;
+    text-align: center;
+}
+
+.choose-title , .about-title{
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.choose-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+    gap: 20px;
+
+}
+
+.choose-card{
+    color: black;
+    min-width: 32%;
+    max-width: 32%;
+    height: 180px;
+    border: 1px solid ;
+    background-color: rgb(222, 222, 222);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+.choose-card h1 {
+    margin: 15px 0 10px;
+    font-size: 30   px;
+}
+.choose-card h5 {
+    margin: 15px 0 10px;
+    font-size: 20px;
+}
+
+.choose-card p {
+    font-size: 16px;
+    color: #4b4b4b;
+}
+
+/* Hover Effects */
+.choose-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Layout */
+/* For medium screens: 2 cards per row */
+@media (max-width: 992px) {
+    .choose-card {
+        min-width: 48%;
+        max-width: 48%;
+    }
+}
+
+/* For small screens: 1 card per row */
+@media (max-width: 768px) {
+    .choose-card {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.about-section {
+    background-color: rgb(222, 222, 222);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+}
