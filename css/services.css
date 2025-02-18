@@ -1,7 +1,7 @@
 /* Section Styling */
 .services-section {
     padding: 30px 20px !important;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(to top left ,#68584d, #C9C8B9);
     color: white;
     border-radius: 10px;
     margin: 20px !important;
@@ -46,8 +46,8 @@
 
 .service-card h3 {
     margin: 15px 0 10px;
-    font-size: 22px;
-    color: #ff7e5f;
+    font-size: 28px;
+    color: #68584d;
 }
 
 .service-card p {
@@ -116,7 +116,7 @@
 
 /* Form Styling */
 .pricing-form {
-    background: #fff;
+    background: #dbdacb;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -131,14 +131,15 @@
 .form-control {
     width: 100%;
     padding: 10px;
-    border: 2px solid #ff6f61;
+    border: 2px solid #68584d;
+    
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
 }
 
 .form-control:focus {
-    border-color: #ff3b3b;
-    box-shadow: 0 0 8px rgba(255, 59, 59, 0.5);
+    border-color: #393029;
+    box-shadow: 0 0 8px rgba(83, 59, 43, 0.9);
 }
 
 /* Buttons Styling */
@@ -156,24 +157,22 @@
 }
 
 .btn-calculate {
-    background: #ff6f61;
-    color: white;
+    background: #c08c5c;
 }
 
 .btn-calculate:hover {
-    background: #ff3b3b;
+    color: white;
+    background: #9c5732;
     transform: scale(1.05);
 }
 
 .btn-service {
-    background: #6c63ff;
+    background: #433830;
     color: white;
+    box-shadow: none;
 }
 
-.btn-service:hover {
-    background: #5348b5;
-    transform: translateY(-3px);
-}
+
 
 /* Pricing Display */
 .pricing-container {
@@ -195,8 +194,14 @@
 }
 
 .service-buttons .btn:hover {
-    transform: scale(1.1);
-    background-color: #17a2b8; /* Darker Blue */
+    transform: scale(1.1)translateY(-3px);
+    background-color: #8a7465; /* Darker Blue */
+    box-shadow: none;
+}   
+.btn-service:active {
+    transform: scale(1.1)translateY(-3px);
+    background-color: #8a7465; /* Darker Blue */
+    box-shadow: none;
 }
 
 .list-group-item {

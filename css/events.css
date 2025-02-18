@@ -30,6 +30,8 @@
     background: #feb47b;
     color: black;
     transform: scale(1.1);
+    box-shadow: none;
+    
 }
 
 /* Event Cards */
@@ -55,8 +57,14 @@
 }
 
 /* Responsive */
+@media (max-width: 992px) {
+    .event-card {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+}
 @media (max-width: 768px) {
-    .event-item {
+    .event-card {
         width: 100%;
         margin-bottom: 20px;
     }

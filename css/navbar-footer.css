@@ -7,7 +7,8 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background: linear-gradient(145deg ,#181818,#474747bb );
+    background: #393029;
+    /* background: linear-gradient(145deg ,#181818,#474747bb ); */
     /* background: linear-gradient(80deg ,#0d002d,#282828e7 ); */
     padding: 15px;
     transition: all 0.3s ease-in-out;
@@ -41,14 +42,13 @@ body {
 
 /* Navbar Shrinks on Scroll */
 .navbar.scrolled {
-    background: #1e3c72 !important; /* Darker blue */
     padding: 10px 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
 }
 
 footer {
-    background-color: #333;
+    background: #393029;
     color: white;
     padding: 20px 0;
     text-align: center;

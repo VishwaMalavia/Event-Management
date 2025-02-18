@@ -3,21 +3,19 @@
     position: relative;
     width: 100%;
     margin-top: 90px !important;
-    height: 50vh; /* Set the height to half the viewport */
+    height: 50vh;
 }
 
-/* Video styling - Take half the screen */
 .hero video.background-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire area */
-    z-index: -1; /* Keeps the video behind the text */
+    object-fit: cover;
+    z-index: -1;
 }
 
-/* Hero text styling */
 .hero-text {
     position: absolute;
     top: 50%;
@@ -25,7 +23,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    z-index: 1; /* Ensures text stays above the video */
+    z-index: 1;
 }
 
 .hero-text h1 {
@@ -41,20 +39,19 @@
 
 /* Carousel Section */
 .carousel {
-    width: 100%; /* Full width */
-    height: 80vh; /* Set a fixed height for the carousel */
+    width: 100%;
+    height: 80vh;
 }
 
-/* Ensure carousel items take the full height and width */
 .carousel-inner {
-    height: 80vh; /* Ensure inner carousel items take the full height */
+    height: 80vh;
 }
 
 /* Set fixed width and height for images inside carousel */
 .carousel-item img {
-    width: 100%; /* Make the image fill the full width of the container */
-    height: 80vh; /* Make the image fill the full height of the container */
-    object-fit: cover; /* Ensures the image covers the space without distortion */
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
 }
 
 .carousel img {
@@ -62,34 +59,73 @@
 }
 
 /* Adjust height for smaller screens */
-@media (max-width: 992px) { /* Tablets */
-    .carousel, .carousel-inner, .carousel-item, .carousel-item img {
+@media (max-width: 992px) {
+
+    .carousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
         height: 70vh;
     }
 
 }
 
-@media (max-width: 768px) { /* Large phones */
-    .carousel, .carousel-inner, .carousel-item, .carousel-item img {
+@media (max-width: 768px) {
+
+    .carousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
         height: 50vh;
     }
 }
 
-@media (max-width: 576px) { /* Small phones */
-    .carousel, .carousel-inner, .carousel-item, .carousel-item img {
+@media (max-width: 576px) {
+
+    .carousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
         height: 30vh;
     }
 }
 
 
 /* Slider for Upcoming Events */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-wrapper {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 0;
+}
+
+.event-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+    height: 450px;
+}
+
+.event-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
 .card {
     background: #ffffff;
     border: none;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; /* Ensures cards have uniform height */
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -99,35 +135,23 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
-.slider-container {
-    position: relative;
-    overflow: hidden; /* Hide overflow */
+.card-body h3 {
+    margin: 1/3;
+    font-size: 28px;
 }
-
-.event-wrapper {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    padding: 10px 0;
-}
-
-.event-container {
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    gap: 15px;
-    scroll-snap-type: x mandatory; /* Optional: for smooth scrolling */
-    transition: transform 0.5s ease-in-out;
-    padding: 20px;
-    height: 60vh;
+.event-card .card-body p {
+    margin: 1/3 ;
+    font-size: 16px;
+    color: #4b4b4b;
 }
 
 .event-card {
     flex: 0 0 auto;
-    margin-right: 15px; /* Space between cards */
-    background-color: #fff; /* Card background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0.1, 0.6); /* Shadow effect */
-    scroll-snap-align: start; /* Optional: for smooth scrolling */
+    margin-right: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0.1, 0.6);
+    scroll-snap-align: start;
     overflow: hidden;
     min-width: 25%;
     max-width: 25%;
@@ -135,19 +159,19 @@
 }
 
 .event-card img {
-    width: 100%; /* Make image responsive */
-    height: 200px; /* Fixed height for uniformity */
-    object-fit: cover; /* Crop and scale images to cover the area */
-    border-radius: 8px 8px 0 0; /* Rounded corners for the top */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
 }
 
 .event-card h3 {
-    margin: 10px 0; /* Space above and below the title */
-    
+    margin: 10px 0;
+
 }
 
 .event-card p {
-    color: #666; /* Text color */
+    color: #666;
     font-size: 0.9em;
 }
 
@@ -157,6 +181,7 @@
         min-width: 33%;
         max-width: 33%;
     }
+    
 }
 
 @media (max-width: 992px) {
@@ -174,7 +199,8 @@
 }
 
 /* Navigation Arrows */
-.scroll-left, .scroll-right {
+.scroll-left,
+.scroll-right {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -194,19 +220,9 @@
 .scroll-right {
     right: 20px;
 }
-.event-container {
-    overflow-x: scroll;           /* Enable horizontal scrolling */
-    scrollbar-width: none;        /* Firefox */
-    -ms-overflow-style: none;     /* Internet Explorer 10+ */ 
-}
-  
-.event-container::-webkit-scrollbar {
-    display: none;                /* Chrome, Safari, Opera */
-}
 
 
 /* Gallery */
-/* General Accordion Styles */
 .accordion {
     border: none;
     box-shadow: none;
@@ -222,38 +238,35 @@
 
 /* Accordion Header Styles */
 .accordion-header {
-    background-color: #FF7043; /* Lighter orange background */
     border-radius: 10px;
 }
 
 .accordion-button {
+    background: linear-gradient(80deg ,#393029,#68584d, #C9C8B9);
     padding: 15px 20px;
     font-size: 18px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
-    background-color: #FF7043; /* Default lighter orange */
     border: none;
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .accordion-button:hover {
-    background: linear-gradient(135deg, #FF7043, #FFEB3B); /* Blend between orange and yellow on hover */
-    color: #000; /* Change text color to black for better contrast */
+    background:  #C9C8B9;
+    color: #000;
 }
 
 .accordion-button:focus {
-    box-shadow: none; /* Remove the focus ring */
+    box-shadow: none;
 }
 
-/* Change to yellow when accordion item is active */
 .accordion-button:not(.collapsed) {
-    background-color: #FFEB3B; /* Yellow when active */
-    color: #000; /* Change text color to black for better contrast */
+    background:  #C9C8B9;
+    color: #000;
 }
 
-/* Accordion Body Styles */
 .accordion-collapse {
     transition: all 0.4s ease;
 }
@@ -262,10 +275,10 @@
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background:  #b0afa2;
 }
 
-/* Gallery Image Styles */
 .gallery-img {
     width: 100%;
     height: 300px;
@@ -276,14 +289,14 @@
 }
 
 .gallery-img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .accordion-button {
-        font-size: 16px; /* Smaller text on smaller screens */
+        font-size: 16px;
         padding: 12px 15px;
     }
 
@@ -303,23 +316,25 @@
     }
 }
 
-.model:hover{
+.model:hover {
     cursor: pointer;
 }
+
 #modalImage {
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    cursor: pointer;
 }
 
 /* Client Reviews */
 #reviewsContainer {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Eye-catching gradient */
+    background: linear-gradient(to top left ,#68584d, #C9C8B9);
     padding: 50px 20px;
     border-radius: 10px;
     text-align: center;
 }
+
 /* Review Section Styling */
 .review-section {
-    background: linear-gradient(135deg, black  , darkgrey); /* Coral to Soft Pink Gradient */
+    background: linear-gradient(135deg, black, darkgrey);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 5px 25px rgba(255, 105, 61, 0.2);
@@ -329,24 +344,17 @@
     color: #fff;
 }
 
-/* Heading Styling */
 /* Review Section */
 .review-section {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(to top left ,#393029 ,#68584d, #C9C8B9);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     text-align: center;
     color: #fff;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.review-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Heading */
 .review-heading {
     font-size: 28px;
     font-weight: bold;
@@ -357,7 +365,6 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Form Styling */
 .form-group {
     text-align: left;
     margin-bottom: 15px;
@@ -370,7 +377,6 @@ label {
     text-transform: uppercase;
 }
 
-/* Input & Textarea */
 .form-control {
     background: rgba(255, 255, 255, 0.8);
     border: none;
@@ -386,9 +392,8 @@ label {
     transform: scale(1.02);
 }
 
-/* Submit Button */
 .btn-primary {
-    background: #4CAF50;
+    background: #3d8c40f6;
     border: none;
     padding: 12px;
     font-size: 18px;
@@ -403,7 +408,6 @@ label {
     overflow: hidden;
 }
 
-/* Button Hover Effect */
 .btn-primary:hover {
     background: #45a049;
     transform: scale(1.05);
@@ -416,6 +420,7 @@ label {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

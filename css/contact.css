@@ -2,7 +2,7 @@
 .contact-section {
     padding-top: 100px;
     padding-bottom:40px ;
-    background: linear-gradient(to right, #ff9966, #ff5e62);
+    background: linear-gradient(to top left ,#393029 ,#866955, #8c5537);    
     text-align: center;
     color: black;
 }
@@ -65,7 +65,7 @@
 }
 
 .contact-form h3 {
-    color: #ff5e62;
+    color: #765c4a;
     margin-bottom: 15px;
 }
 
@@ -81,7 +81,7 @@
 
 .contact-form button {
     width: 100%;
-    background: #ff5e62;
+    background: #765c4a;
     color: white;
     padding: 10px;
     border: none;
@@ -92,7 +92,7 @@
 }
 
 .contact-form button:hover {
-    background: #ff9966;
+    background: #d18159;
 }
 
 /* Animations */

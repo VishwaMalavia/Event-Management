@@ -1,16 +1,19 @@
 /* About Section */
-.font-size{
-    font-size:20px;
+.font-size {
+    font-size: 20px;
 }
+
 /* Small screens (phones) */
 @media (max-width: 576px) {
     .font-size {
-        font-size: 15px; /* Adjust font size */
+        font-size: 15px;
     }
+
     img {
-        max-width: 100%; /* Ensure images take full width on small devices */
+        max-width: 100%;
     }
 }
+
 .choose-section {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 10px;
@@ -18,8 +21,9 @@
     text-align: center;
 }
 
-.choose-title , .about-title{
-    font-size: 36px;
+.choose-title,
+.about-title {
+    font-size: 31px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -35,13 +39,14 @@
 
 }
 
-.choose-card{
+.choose-card {
     color: black;
     min-width: 32%;
     max-width: 32%;
     height: 180px;
-    border: 1px solid ;
-    background-color: rgb(222, 222, 222);
+    border: 1px solid;
+    background-color: #68584d;
+    background: linear-gradient(to top left ,#68584d, #C9C8B9);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     padding: 12px;
     border-radius: 12px;
@@ -51,8 +56,9 @@
 
 .choose-card h1 {
     margin: 15px 0 10px;
-    font-size: 30   px;
+    font-size: 30 px;
 }
+
 .choose-card h5 {
     margin: 15px 0 10px;
     font-size: 20px;
@@ -86,8 +92,73 @@
     }
 }
 
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .about-section {
-    background-color: rgb(222, 222, 222);
+    background: linear-gradient(to top left ,#68584d, #C9C8B9);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 10px;
 }
+
+.about-subtitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    animation: fadeInUp 1s ease-in-out;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+/* Keyframes for fadeInUp Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Animation classes */
+.slide-in-left {
+    animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease-in-out forwards;
+}
+
+/* New Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
