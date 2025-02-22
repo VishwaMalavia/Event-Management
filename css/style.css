@@ -27,13 +27,13 @@
 }
 
 .hero-text h1 {
-    font-size: 2.5em;
+    font-size: 30px;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .hero-text p {
-    font-size: 1.2em;
+    font-size: 15px;
 }
 
 
@@ -60,7 +60,6 @@
 
 /* Adjust height for smaller screens */
 @media (max-width: 992px) {
-
     .carousel,
     .carousel-inner,
     .carousel-item,
@@ -71,7 +70,6 @@
 }
 
 @media (max-width: 768px) {
-
     .carousel,
     .carousel-inner,
     .carousel-item,
@@ -81,7 +79,6 @@
 }
 
 @media (max-width: 576px) {
-
     .carousel,
     .carousel-inner,
     .carousel-item,
@@ -89,7 +86,6 @@
         height: 30vh;
     }
 }
-
 
 /* Slider for Upcoming Events */
 .slider-container {
@@ -116,7 +112,6 @@
 
 .event-container::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari, Opera */
 }
 
 .card {
@@ -181,7 +176,6 @@
         min-width: 33%;
         max-width: 33%;
     }
-    
 }
 
 @media (max-width: 992px) {
@@ -242,7 +236,7 @@
 }
 
 .accordion-button {
-    background: linear-gradient(80deg ,#393029,#68584d, #C9C8B9);
+    background: linear-gradient(90deg ,#1d6263,#afa281, #F3E5C3);
     padding: 15px 20px;
     font-size: 18px;
     font-weight: bold;
@@ -254,7 +248,7 @@
 }
 
 .accordion-button:hover {
-    background:  #C9C8B9;
+    background:  #F3E5C3;
     color: #000;
 }
 
@@ -263,7 +257,7 @@
 }
 
 .accordion-button:not(.collapsed) {
-    background:  #C9C8B9;
+    background:  #F3E5C3;
     color: #000;
 }
 
@@ -276,7 +270,7 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background:  #b0afa2;
+    background:  #d7caab;
 }
 
 .gallery-img {
@@ -326,30 +320,22 @@
 
 /* Client Reviews */
 #reviewsContainer {
-    background: linear-gradient(to top left ,#68584d, #C9C8B9);
+    background: #f0dca7;
+    background: linear-gradient(to top left ,#2b7172, #f0dca7);
     padding: 50px 20px;
     border-radius: 10px;
     text-align: center;
 }
 
-/* Review Section Styling */
-.review-section {
-    background: linear-gradient(135deg, black, darkgrey);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(255, 105, 61, 0.2);
-    max-width: 900px;
-    margin: 30px auto;
-    text-align: center;
-    color: #fff;
-}
 
 /* Review Section */
 .review-section {
-    background: linear-gradient(to top left ,#393029 ,#68584d, #C9C8B9);
+    background: #1f6465;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    max-width: 900px;
+    margin: 30px auto;
     text-align: center;
     color: #fff;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -393,13 +379,13 @@ label {
 }
 
 .btn-primary {
-    background: #3d8c40f6;
+    background: #f0dca7;
     border: none;
     padding: 12px;
     font-size: 18px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 100%;
-    color: #fff;
+    color: #000;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -409,7 +395,7 @@ label {
 }
 
 .btn-primary:hover {
-    background: #45a049;
+    background: #c4b384;
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }

@@ -15,8 +15,8 @@
     <div id="home1"></div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Logo" width="50" class="rounded-pill"> <span>Infinity Evnets</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -34,6 +34,7 @@
         </div>
     </nav>
 
+    <!-- Service Section -->
     <div class="services-section">
         <h2 class="section-title">Our Premium Services</h2>
         <p class="section-subtitle">We provide top-notch services to make your event unforgettable.</p>
@@ -70,6 +71,7 @@
         </div>
     </div>
 
+    <!-- Pricing Section -->
     <div class="container py-5">
         <h2 class="section-title">Service Charges:</h2>
         <form id="pricingForm" class="pricing-form">
@@ -79,7 +81,8 @@
             </div>
             <div class="form-group">
                 <label for="eventDuration" class="form-label">Event Duration (Hours)</label>
-                <input type="number" id="eventDuration" class="form-control" placeholder="Enter event duration in hours" required>
+                <input type="number" id="eventDuration" class="form-control" placeholder="Enter event duration in hours"
+                    required>
             </div>
             <button type="button" class="btn btn-calculate" onclick="calculateTotalPricing()">Calculate Prices</button>
         </form>
@@ -91,9 +94,9 @@
             <button class="btn btn-service" onclick="showPricing('photography')">Photography & Videography</button>
             <button class="btn btn-service" onclick="showPricing('venue')">Venue Selection</button>
             <button class="btn btn-service" onclick="showPricing('entertainment')">Entertainment & Performances</button>
-            <button class="btn btn-service" onclick="showPricing('logistics')">Logistics & Transportation</button>
+            <button class="btn btn-service" onclick="showPricing('Lighting')">Lighting & Effects</button>
         </div>
-        <!-- Pricing Display Section -->
+        <!-- Pricing Display -->
         <div class="mt-4 pricing-container" id="pricingDetails"></div>
     </div>
 
@@ -104,15 +107,13 @@
         </a>
     </div>
     <script>
-        // Get the back-to-top button by class name (returns a collection, so we access the first element)
         const backToTopButton = document.getElementById('back-to-top');
 
-        // Directly use the onscroll event handler
         window.onscroll = function () {
-            if (window.scrollY > 100) { // Show the button after scrolling down 100px
+            if (window.scrollY > 100) {
                 backToTopButton.style.display = 'flex';
-                backToTopButton.style.backgroundColor = "#333";
-            } else { // Hide the button if at the top of the page
+                backToTopButton.style.backgroundColor = "#174e4f";
+            } else {
                 backToTopButton.style.display = 'none';
                 backToTopButton.style.backgroundColor = "white";
 
@@ -120,7 +121,7 @@
         };
     </script>
 
-    <footer class="bg-dark text-white pb-0">
+    <footer class=" text-white pb-0">
         <div class="container">
             <div class="row">
                 <!-- Company Info -->
@@ -150,10 +151,10 @@
                 <div class="col-md-3 text-left">
                     <h4>Quick Links</h4>
                     <ul class="list-unstyled ">
+                        <li>> <a href="about.html" class="text-white text-decoration-none">About Us</a></li>
                         <li>> <a href="index.html?#gallery" class="text-white text-decoration-none">Gallery</a></li>
                         <li>> <a href="index.html?#review" class="text-white text-decoration-none">Review</a></li>
                         <li>> <a href="index.html" class="text-white text-decoration-none">Terms & Condition</a></li>
-                        <li>> <a href="index.html" class="text-white text-decoration-none">Privacy Policy</a></li>
                     </ul>
                 </div>
 
@@ -168,8 +169,8 @@
                                         <i class="bi bi-geo-alt"></i>
                                     </div>
                                     <div class="col-md">
-                                        607, Abhijyot Square, B/h. SG Highway, Divya Bhaskar Press, Makarba, Ahmedabad,
-                                        Gujarat, 380051.
+                                        <p>LJ Institute of Engineering and Technology, <br>TTEC Rd, Makarba,
+                                            Sarkhej,Ahmedabad, Gujarat 380054 </p>
                                     </div>
                                 </div>
                             </li>
@@ -179,12 +180,11 @@
                                         <i class="bi bi-envelope-fill "></i>
                                     </div>
                                     <div class="col-md">
-                                        <a href="mailto:vishwama121@gmail.com" class="text-decoration-none text-white">
-                                            <span>vishwama121@gmail.com</span>
+                                        <a href="mailto:infinityevent@info.com" class="text-decoration-none text-white">
+                                            <span>infinityevent@info.com</span>
                                         </a>
                                     </div>
                                 </div>
-
                             </li>
                             <li class=" text-color">
                                 <div class="row d-flex align-items-center">
@@ -193,9 +193,7 @@
                                     </div>
                                     <div class="col-md">
                                         <a href="tel:+918849981524"
-                                            class="text-decoration-none text-white">+918849981524</a> ,
-                                        <a href="tel:+919998887776"
-                                            class="text-decoration-none text-white">+919998887776</a>
+                                            class="text-decoration-none text-white">+918849981524</a>
                                     </div>
                                 </div>
                             </li>

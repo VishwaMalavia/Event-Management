@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/events.css">
-    <link rel="stylesheet" href="css/navbar-footer.css"> 
+    <link rel="stylesheet" href="css/navbar-footer.css">
 </head>
+
 <body>
     <div id="home1"></div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" >
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="Logo" width="50" class="rounded-pill"> <span>Infinity Evnets</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -48,82 +50,81 @@
             <button class="btn btn-filter" onclick="filterEvents('Entertainment')">Entertainment</button>
             <button class="btn btn-filter" onclick="filterEvents('fashion')">Fashion</button>
             <button class="btn btn-filter" onclick="filterEvents('Festivals')">Festivals</button>
-        </div> 
-        
+        </div>
 
         <!-- Events Grid -->
         <div class="row" id="events-list">
             <!-- Sample Event Card -->
         </div>
-    
-            
+
+
         <script>
             const events = [
-            { id: 1, type: 'Business', title: 'Corporate Meetup', description: 'Professional networking event.' },
-            { id: 2, type: 'wedding', title: 'Wedding Fair', description: 'Wedding planning showcase.' },
-            { id: 3, type: 'party', title: 'Birthday Bash', description: 'Celebrate your special day.' },
-            { id: 4, type: 'promotion', title: 'Movie Promotion', description: 'Celebrate music night.' },
-            { id: 5, type: 'promotion', title: 'Product Launch', description: 'Celebrate music night.' },
-            { id: 6, type: 'Entertainment', title: 'Food Festival', description: 'Celebrate music night.' },
-            { id: 7, type: 'fashion', title: 'Fashion Show', description: 'Celebrate music night.' },
-            { id: 8, type: 'Business', title: 'Awards Ceremonies', description: 'Celebrate music night.' },
-            { id: 9, type: 'Entertainment', title: 'Music Concerts', description: 'Celebrate music night.' },
-            { id: 10, type: 'Festivals', title: 'Garba Nights', description: 'Celebrate music night.' },
-            { id: 11, type: 'party', title: 'Farewell Parties', description: 'Celebrate music night.' },
-            { id: 12, type: 'Business', title: 'Annual General Meeting', description: 'Celebrate music night.' },
-            { id: 13, type: 'wedding', title: 'Engagement Ceremony', description: 'Celebrate music night.' },
-            { id: 14, type: 'party', title: 'Anniversary Parties', description: 'Celebrate music night.' },
-            { id: 15, type: 'Business', title: 'Exhibitions', description: 'Celebrate music night.' },
-            { id: 16, type: 'wedding', title: 'Pre-Wedding', description: 'Celebrate music night.' },
-            { id: 17, type: 'Festivals', title: 'Festival of Colors', description: 'Celebrate music night.' },
-        ];
-        
-        // Function to load events dynamically
-        function loadEvents() {
-            let eventContainer = document.getElementById("events-list");
-            eventContainer.innerHTML = ""; // Clear previous content
-        
-            events.forEach(event => {
-                let eventCard = `
+                { id: 1, type: 'Business', title: 'Corporate Meetup', description: ' A professional gathering for networking, collaboration, and business growth.' },
+                { id: 2, type: 'wedding', title: 'Wedding Fair',description:'Wedding planning showcase featuring top vendors.' },
+                { id: 3, type: 'party', title: 'Birthday Bash',  description: 'Celebrate your special day with customized themes.', },
+                { id: 4, type: 'promotion', title: 'Movie Promotion', description: 'An engaging event to showcase and market an upcoming film to the audience.' },
+                { id: 5, type: 'promotion', title: 'Product Launch',description: 'Grand product unveiling with high-end production.'},
+                { id: 6, type: 'Entertainment', title: 'Food Festival',  description: 'A paradise for food lovers with multiple cuisines.' },
+                { id: 7, type: 'fashion', title: 'Fashion Show',  description: 'Showcasing the latest fashion trends and designers.' },
+                { id: 8, type: 'Business', title: 'Awards Ceremonies',description: 'A prestigious event honoring excellence and achievements in various fields.' },
+                { id: 9, type: 'Entertainment', title: 'Music Concerts', description: 'Experience live music performances by top artists.' },
+                { id: 10, type: 'Festivals', title: 'Garba Nights', description: 'A vibrant celebration of dance, music, and culture with traditional Gujarati moves.'},
+                { id: 11, type: 'party', title: 'Farewell Parties',  description: 'Say goodbye with an unforgettable farewell celebration.'},
+                { id: 12, type: 'Business', title: 'Annual General Meeting',  description: 'A yearly meeting to discuss business strategies.' },
+                { id: 13, type: 'wedding', title: 'Engagement Ceremony',  description: 'An intimate gathering to celebrate your engagement.' },
+                { id: 14, type: 'party', title: 'Anniversary Parties',description: 'A special event to celebrate love and togetherness.' },
+                { id: 15, type: 'Business', title: 'Exhibitions', description: 'Showcase your brand and products to a larger audience.'},
+                { id: 16, type: 'wedding', title: 'Pre-Wedding', description: 'Celebrate the moments leading up to your big day.'},
+                { id: 17, type: 'Festivals', title: 'Festival of Colors',description: ' A joyful celebration filled with music, dance, and vibrant color splashes.' },
+            ];
+
+            // Function to load events dynamically
+            function loadEvents() {
+                let eventContainer = document.getElementById("events-list");
+                eventContainer.innerHTML = ""; // Clear previous content
+
+                events.forEach(event => {
+                    let eventCard = `
                     <div class="col-md-4 mb-4 event-item ${event.type}">
                         <div class="card event-card">
                             <img src="images/event${event.id}.jpg" class="card-img-top" alt="${event.title}">
                             <div class="card-body">
-                                <h5 class="card-title">${event.title}</h5>
+                                <h4 class="card-title">${event.title}</h4>
                                 <p class="card-text">${event.description}</p>
                                 <a href="event-detail.html?id=${event.id}" class="btn btn-primary">Know More</a>
                             </div>
                         </div>
                     </div>
                 `;
-                eventContainer.innerHTML += eventCard;
-            });
-        }
-        
-        // Function to filter events
-        function filterEvents(category) {
-            let events = document.querySelectorAll('.event-item');
-            events.forEach(event => {
-                if (category === 'all' || event.classList.contains(category)) {
-                    event.style.display = "block";
-                } else {
-                    event.style.display = "none";
-                }
-            });
-        
-            // Update active button style
-            document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
-            document.querySelector(`[onclick="filterEvents('${category}')"]`).classList.add('active');
-        }
-        
-        // Load events when the page loads
-        document.addEventListener("DOMContentLoaded", loadEvents);
-        
+                    eventContainer.innerHTML += eventCard;
+                });
+            }
 
-        
+            // Function to filter events
+            function filterEvents(category) {
+                let events = document.querySelectorAll('.event-item');
+                events.forEach(event => {
+                    if (category === 'all' || event.classList.contains(category)) {
+                        event.style.display = "block";
+                    } else {
+                        event.style.display = "none";
+                    }
+                });
+
+                // Update active button style
+                document.querySelectorAll('.btn-filter').forEach(btn => btn.classList.remove('active'));
+                document.querySelector(`[onclick="filterEvents('${category}')"]`).classList.add('active');
+            }
+
+            // Load events when the page loads
+            document.addEventListener("DOMContentLoaded", loadEvents);
+
+
+
         </script>
-            
-            <!-- More Events Can Be Added Here -->
+
+        <!-- More Events Can Be Added Here -->
     </section>
 
     <!-- create home button which will redirect top of page: this is aplicablt for all pages-->
@@ -134,15 +135,13 @@
 
     </div>
     <script>
-        // Get the back-to-top button by class name (returns a collection, so we access the first element)
         const backToTopButton = document.getElementById('back-to-top');
 
-        // Directly use the onscroll event handler
         window.onscroll = function () {
-            if (window.scrollY > 100) { // Show the button after scrolling down 100px
+            if (window.scrollY > 100) {
                 backToTopButton.style.display = 'flex';
-                backToTopButton.style.backgroundColor = "#333";
-            } else { // Hide the button if at the top of the page
+                backToTopButton.style.backgroundColor = "#174e4f";
+            } else {
                 backToTopButton.style.display = 'none';
                 backToTopButton.style.backgroundColor = "white";
 
@@ -150,7 +149,7 @@
         };
     </script>
 
-    <footer class="bg-dark text-white pb-0">
+    <footer class=" text-white pb-0">
         <div class="container">
             <div class="row">
                 <!-- Company Info -->
@@ -180,10 +179,10 @@
                 <div class="col-md-3 text-left">
                     <h4>Quick Links</h4>
                     <ul class="list-unstyled ">
+                        <li>> <a href="about.html" class="text-white text-decoration-none">About Us</a></li>
                         <li>> <a href="index.html?#gallery" class="text-white text-decoration-none">Gallery</a></li>
                         <li>> <a href="index.html?#review" class="text-white text-decoration-none">Review</a></li>
                         <li>> <a href="index.html" class="text-white text-decoration-none">Terms & Condition</a></li>
-                        <li>> <a href="index.html" class="text-white text-decoration-none">Privacy Policy</a></li>
                     </ul>
                 </div>
 
@@ -198,8 +197,8 @@
                                         <i class="bi bi-geo-alt"></i>
                                     </div>
                                     <div class="col-md">
-                                        607, Abhijyot Square, B/h. SG Highway, Divya Bhaskar Press, Makarba, Ahmedabad,
-                                        Gujarat, 380051.
+                                        <p>LJ Institute of Engineering and Technology, <br>TTEC Rd,
+                                            Makarba,Sarkhej,Ahmedabad, Gujarat 380054 </p>
                                     </div>
                                 </div>
                             </li>
@@ -209,8 +208,8 @@
                                         <i class="bi bi-envelope-fill "></i>
                                     </div>
                                     <div class="col-md">
-                                        <a href="mailto:vishwama121@gmail.com" class="text-decoration-none text-white">
-                                            <span>vishwama121@gmail.com</span>
+                                        <a href="mailto:infinityevent@info.com" class="text-decoration-none text-white">
+                                            <span>infinityevent@info.com</span>
                                         </a>
                                     </div>
                                 </div>
@@ -223,9 +222,7 @@
                                     </div>
                                     <div class="col-md">
                                         <a href="tel:+918849981524"
-                                            class="text-decoration-none text-white">+918849981524</a> , 
-                                        <a href="tel:+919998887776"
-                                            class="text-decoration-none text-white">+919998887776</a>
+                                            class="text-decoration-none text-white">+918849981524</a>
                                     </div>
                                 </div>
                             </li>

@@ -5,8 +5,8 @@
 
 /* Filter Buttons */
 .btn-filter {
-    background: #ff7e5f;
-    color: #fff;
+    background: #f0dca7;
+    color: black;
     margin: 5px;
     padding: 12px;
     border: none;
@@ -15,23 +15,11 @@
     border-radius: 20px;
 }
 
-.btn-primary {
-    color: #fff;
-    width: 100%;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 20px;
-    
-}
-
-
-.btn-filter:hover,
-.btn-filter.active {
-    background: #feb47b;
-    color: black;
+.btn-filter:hover, .btn-filter.active {
+    background: #c4b384;
+    color: white;
     transform: scale(1.1);
     box-shadow: none;
-    
 }
 
 /* Event Cards */
@@ -43,7 +31,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures content stays properly aligned */
+    justify-content: space-between; 
 }
 .card:hover {
     transform: scale(1.05);
@@ -56,6 +44,25 @@
     border-radius: 10px 10px 0 0;
 }
 
+.btn-primary {
+    background: #f0dca7;
+    border: none;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 100%;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.btn-primary:hover {
+    background: #c4b384;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
 /* Responsive */
 @media (max-width: 992px) {
     .event-card {

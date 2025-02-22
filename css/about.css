@@ -8,14 +8,12 @@
     .font-size {
         font-size: 15px;
     }
-
     img {
         max-width: 100%;
     }
 }
 
 .choose-section {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 10px;
     margin-top: 50px !important;
     text-align: center;
@@ -46,7 +44,7 @@
     height: 180px;
     border: 1px solid;
     background-color: #68584d;
-    background: linear-gradient(to top left ,#68584d, #C9C8B9);
+    background: linear-gradient(to top left ,#356869, #f0dca7);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     padding: 12px;
     border-radius: 12px;
@@ -56,12 +54,12 @@
 
 .choose-card h1 {
     margin: 15px 0 10px;
-    font-size: 30 px;
+    font-size: 35px;
 }
 
-.choose-card h5 {
+.choose-card h4 {    
     margin: 15px 0 10px;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .choose-card p {
@@ -105,13 +103,11 @@
 }
 
 .about-section {
-    background: linear-gradient(to top left ,#68584d, #C9C8B9);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to top left ,#356869, #f0dca7);
     border-radius: 10px;
 }
 
 .about-subtitle {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     animation: fadeInUp 1s ease-in-out;
     font-weight: bold;

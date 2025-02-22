@@ -6,8 +6,6 @@
 .event-detail {
     text-align: justify;
     padding: 35px;
-    /* background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    color: white; */
 }
 
 .event-image {
@@ -35,7 +33,10 @@ ul li {
 
 /* Inquiry Form Styling */
 .inquiry-section {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient Background */
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    /* Gradient Background */
+    background: #1f6465;
+
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -77,7 +78,7 @@ ul li {
     padding: 10px;
     border: 2px solid white;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.571);
     color: white;
     font-size: 16px;
     transition: 0.3s;
@@ -92,8 +93,7 @@ ul li {
 
 /* Button Styling */
 .inquiry-form .btn-submit {
-    background: white;
-    color: #ff7e5f;
+    background: #cfc4b2;
     border: none;
     padding: 12px;
     font-size: 18px;
@@ -106,7 +106,8 @@ ul li {
 }
 
 .inquiry-form .btn-submit:hover {
-    background: #fff3e0;
+    background: #ffebcb;
+    transform: scale(1.05);
     color: #d65a31;
 }
 
@@ -124,62 +125,63 @@ ul li {
 
 
 .popup {
-    width:400px;
-    background-color: #e8bcf0;
+    width: 400px;
+    background: #f0dca7;
+    color: black;
     border-radius: 3mm;
     top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     position: fixed;
     /* padding: 30px; */
     visibility: hidden;
-  }
-  
-  .popup img {
-    padding-top: 20px;
-  }
-  
-  .popup button {
+}
+
+.popup button {
     background-color: #fff;
-    border: 1px solid #7600bc;
-    color: #7600bc;
+    border: none;
+    color: #00796b;
+    /* Dark teal */
     display: block;
     border-radius: 6px;
     text-align: center;
-    margin: 50px;
+    margin: 20px;
     padding: 10px;
-    width: 2in;
     font-size: 20px;
+    width: 50%;
+    transition: 0.3s;
     margin-left: 25%;
-  }
-  
-  .popup button:hover {
+}
+
+.popup button:hover {
     background-color: #fff;
-    border: 2px solid #7600bc;
-    color: #7600bc;
+    border: 2px solid #006453;
+    color: #004d40;
+    transform: scale(1.05);
     display: block;
     font-weight: bolder;
     text-align: center;
     cursor: pointer;
     margin-left: 25%;
-  }
-  
-  /* Recommendation Form */ 
-  fieldset {
+}
+
+/* Recommendation Form */
+fieldset {
     display: flexbox;
     align-content: center;
-    justify-content: center;  
-    padding: 25px; 
-    margin-left: 50px; 
-    margin-right: 50px;   
+    justify-content: center;
+    padding: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
     border: thin solid white;
     width: 50%;
-  }
+}
 
-  /* Event Detail Container */
+/* Event Detail Container */
 .event-detail-container {
-    padding: 40px 15px ; 
+    margin-top: 30px;
+    padding: 40px 15px;
     background: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -244,12 +246,12 @@ ul li {
         flex-direction: column-reverse;
         text-align: center;
     }
-    
+
     .event-services {
         text-align: left;
         display: inline-block;
     }
-    
+
     .event-detail-container img {
         height: auto;
     }

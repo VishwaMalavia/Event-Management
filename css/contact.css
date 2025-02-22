@@ -2,7 +2,7 @@
 .contact-section {
     padding-top: 100px;
     padding-bottom:40px ;
-    background: linear-gradient(to top left ,#393029 ,#866955, #8c5537);    
+    background: linear-gradient(to top left ,#0f3d3d ,#f0dca7 , #437778);    
     text-align: center;
     color: black;
 }
@@ -25,6 +25,7 @@
 
 /* Contact Container */
 .contact-container {
+    margin: 200px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -32,7 +33,21 @@
     margin: auto;
     align-items: center;
     gap: 20px;
+    opacity: 0;
+    transform: translateX(-100px); 
+    animation: slideIn 1s ease-out forwards;
+}
 
+/* Keyframes for Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Contact Details */
@@ -65,7 +80,7 @@
 }
 
 .contact-form h3 {
-    color: #765c4a;
+    color: #174E4F;
     margin-bottom: 15px;
 }
 
@@ -81,7 +96,7 @@
 
 .contact-form button {
     width: 100%;
-    background: #765c4a;
+    background: #356869;
     color: white;
     padding: 10px;
     border: none;
@@ -91,9 +106,16 @@
     transition: 0.3s;
 }
 
-.contact-form button:hover {
-    background: #d18159;
+.contact-form button:hover{
+    background: #174E4F;
+    transform: scale(1.05);
 }
+.contact-form .btn-primary:active {
+    background: #174E4F !important;
+    border-color: black !important;
+    transform: scale(1.05);
+}
+
 
 /* Animations */
 @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
@@ -140,17 +162,19 @@
     width: 80%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .contact-box:hover {
     transform: scale(1.05);
-    border-color: #007bff;
+    border-color: #174E4F;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Icons */
 .contact-box .icon {
     font-size: 30px;
-    color: #007bff;
     margin-bottom: 10px;
     color: black;
 }

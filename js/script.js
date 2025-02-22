@@ -1,28 +1,11 @@
-function toggleMenu() {
-    let navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-}
-
 function openGalleryModal(image) {
     document.getElementById('modalImage').src = image.src;
 }
 
-// window.addEventListener("scroll", function () {
-//     let navbar = document.querySelector(".navbar");
-//     if (window.scrollY > 50) {
-//         navbar.classList.add("scrolled");
-//     } else {
-//         navbar.classList.remove("scrolled");
-//     }
-// });
-
 form = (event) => {
     event.preventDefault(); // Prevent page reload
-
-    // Get input values
-    const name = document.getElementById('reviewerName').value;
+    const name = document.getElementById('reviewerName').value;// Get input values
     const review = document.getElementById('reviewText').value;
-
     // Create new review card
     const newReview = document.createElement('div');
     newReview.className = 'col-md-4 mb-2';
@@ -34,11 +17,7 @@ form = (event) => {
                 </div>
             </div>
         `;
-
-    // Append to reviews container
     document.getElementById('reviewsContainer').querySelector('.row').appendChild(newReview);
-
-    // Clear form fields
     document.getElementById('reviewForm').reset();
 }
 
@@ -66,12 +45,12 @@ function showPricing(serviceType) {
     let duration = parseInt(document.getElementById("eventDuration").value) || 0;
 
     let serviceCosts = {
-        catering: guests * 500,       // ₹500 per guest
-        decoration: 20000,            // Fixed cost ₹20,000
-        photography: duration * 4000, // ₹4,000 per hour
-        venue: duration * 10000,      // ₹10,000 per hour
-        entertainment: duration * 8000, // ₹8,000 per hour
-        logistics: duration * 3000    // ₹3,000 per hour
+        catering: guests * 500 +`<br>basic catering cost is 500 per guest.cost will also change depending on the menu`,       
+        decoration: 25000 + `<br> strating decoration price is 25000 depeneds on required of decoration`,            
+        photography: duration * 4000, 
+        venue: duration * 50000+ `<br> strating venue price is 50000 depeneds on location of venue`,     
+        entertainment: duration * 8000,
+        Lighting: duration * 3000
     };
 
     let message = "";
@@ -101,12 +80,12 @@ function calculateTotalPricing() {
     }
 
     let serviceCosts = {
-        catering: guests * 500,       // ₹500 per guest
-        decoration: 20000,            // Fixed cost ₹20,000
-        photography: duration * 4000, // ₹4,000 per hour
-        venue: duration * 10000,      // ₹10,000 per hour
-        entertainment: duration * 8000, // ₹8,000 per hour
-        logistics: duration * 3000    // ₹3,000 per hour
+        catering: guests * 500,       
+        decoration: 25000,            
+        photography: duration * 4000, 
+        venue: duration * 50000,      
+        entertainment: duration * 8000, 
+        Lighting: duration * 3000   
     };
 
     let totalCost = Object.values(serviceCosts).reduce((sum, cost) => sum + cost, 0);
@@ -118,3 +97,4 @@ function calculateTotalPricing() {
         </div>
     `;
 }
+
